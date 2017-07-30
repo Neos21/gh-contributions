@@ -24,7 +24,7 @@ DAYS=0
 # START から END の日付までループする
 while [ $DAYS -le $DAYS_LOOP ]; do
   # date -d オプション (日付の加減算) の文字列表現を作る
-  CURRENT="2016-01-01 $DAYS day"
+  CURRENT="$START $DAYS day"
   
   # YYYY-MM-DD 形式と git commit 用の日付形式 (Fri Jan 01 12:00:00 2016 +0900) を作る
   LANG=en_US YMD=`date -d "$CURRENT" '+%Y-%m-%d'`
