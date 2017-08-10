@@ -1,41 +1,43 @@
+[![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png "WTFPL")](http://www.wtfpl.net/)
+
 # gh-contributions.sh
 
-`git commit --date` �I�v�V�����𗘗p���đ��𐶂₷�V�F���X�N���v�g�B
+`git commit --date` オプションを利用して草を生やすシェルスクリプト。
 
 ## How to Use?
 
-�\�� GitHub Contributions ���L���ɂȂ� Git ���[�U����ݒ肵�Ă����B
+予め GitHub Contributions が有効になる Git ユーザ情報を設定しておく。
 
-`gh-contributions.sh` ��C�ӂ̃��|�W�g���� `master` �u�����` (GitHub Contributions ���L���ɂȂ�u�����`) �ɔz�u����B
+`gh-contributions.sh` を任意のリポジトリの `master` ブランチ (GitHub Contributions が有効になるブランチ) に配置する。
 
-`gh-contributions.sh` ���J���A�ϐ� `START` �� `END` ��C�ӂ̓��t�ɐݒ肷��B`YYYY-MM-DD` �`�����]�܂����B
+`gh-contributions.sh` を開き、変数 `START` と `END` を任意の日付に設定する。`YYYY-MM-DD` 形式が望ましい。
 
-�ݒ肪�ł����� `gh-contributions.sh` �����s����B
+設定ができたら `gh-contributions.sh` を実行する。
 
 ```sh
 $ sh ./gh-contributions.sh
 ```
 
-����ƃJ�����g�f�B���N�g���� `gh-contributions.md` �ɓ��t��ǋL���A1���ɂ�1�� `git commit` �𐶐�����B
+するとカレントディレクトリの `gh-contributions.md` に日付を追記しつつ、1日につき1つの `git commit` を生成する。
 
-���Ƃ� `git push` ����� OK�B
+あとは `git push` すれば OK。
 
 # gh-contribution-that-day.sh
 
-�����Ŏw�肵�����t�̃R�~�b�g�𐶐����A���𐶂₷�V�F���X�N���v�g�B
+引数で指定した日付のコミットを生成し、草を生やすシェルスクリプト。
 
 ## How to Use?
 
-�\�� GitHub Contributions ���L���ɂȂ� Git ���[�U����ݒ肵�Ă����B
+予め GitHub Contributions が有効になる Git ユーザ情報を設定しておく。
 
-`gh-contributions.sh` ��C�ӂ̃��|�W�g���� `master` �u�����` (GitHub Contributions ���L���ɂȂ�u�����`) �ɔz�u����B
+`gh-contributions.sh` を任意のリポジトリの `master` ブランチ (GitHub Contributions が有効になるブランチ) に配置する。
 
-�ȉ��̂悤�Ɉ����ŃR�~�b�g�𐶐����������t���w�肵�� `gh-contribution-that-day.sh` �����s����B
+以下のように引数でコミットを生成したい日付を指定して `gh-contribution-that-day.sh` を実行する。
 
 ```sh
 $ sh ./gh-contribution-that-day.sh 20170120
 ```
 
-����ƃJ�����g�f�B���N�g���� `gh-contributions.md` �ɓ��t��ǋL���A1�� `git commit` �𐶐�����B
+するとカレントディレクトリの `gh-contributions.md` に日付を追記しつつ、1つの `git commit` を生成する。
 
-���Ƃ� `git push` ����� OK�B
+あとは `git push` すれば OK。
