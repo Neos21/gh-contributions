@@ -1,10 +1,15 @@
-[![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png "WTFPL")](http://www.wtfpl.net/)
+# gh-contributions
 
-# gh-contributions.sh
+GitHub の草を生やすシェルスクリプト。
+
+
+## gh-contributions.sh
 
 `git commit --date` オプションを利用して草を生やすシェルスクリプト。
 
-## How to Use?
+- [Corredor - GitHub に草を生やすシェルスクリプト「gh-contributions」を作った](http://neos21.hatenablog.com/entry/2017/08/12/080000)
+
+### How to Use?
 
 予め GitHub Contributions が有効になる Git ユーザ情報を設定しておく。
 
@@ -22,11 +27,14 @@ $ sh ./gh-contributions.sh
 
 あとは `git push` すれば OK。
 
-# gh-contribution-that-day.sh
+
+## gh-contribution-that-day.sh
 
 引数で指定した日付のコミットを生成し、草を生やすシェルスクリプト。
 
-## How to Use?
+- [Corredor - 引数で指定した日付のコミットをデッチ上げる gh-contribution-that-day を作った](http://neos21.hatenablog.com/entry/2017/09/02/080000)
+
+### How to Use?
 
 予め GitHub Contributions が有効になる Git ユーザ情報を設定しておく。
 
@@ -41,3 +49,21 @@ $ sh ./gh-contribution-that-day.sh 20170120
 するとカレントディレクトリの `gh-contributions.md` に日付を追記しつつ、1つの `git commit` を生成する。
 
 あとは `git push` すれば OK。
+
+
+## Author
+
+[Neo](http://neo.s21.xrea.com/) ([@Neos21](https://twitter.com/neos21))
+
+
+## Links
+
+- [Neo's World](http://neo.s21.xrea.com/)
+- [Corredor](http://neos21.hatenablog.com/)
+- [Murga](http://neos21.hatenablog.jp/)
+- [El Mylar](http://neos21.hateblo.jp/)
+- [Bit-Archer](http://bit-archer.hatenablog.com/)
+- [GitHub - Neos21GitHub](https://github.com/Neos21GitHub/)
+
+
+[![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png "WTFPL")](http://www.wtfpl.net/)
