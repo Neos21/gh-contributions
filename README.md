@@ -63,7 +63,7 @@ $ sh ./gh-contribution-that-day.sh 20170120
 - [Murga](http://neos21.hatenablog.jp/)
 - [El Mylar](http://neos21.hateblo.jp/)
 - [Bit-Archer](http://bit-archer.hatenablog.com/)
-- [GitHub - Neos21GitHub](https://github.com/Neos21GitHub/)
+- [GitHub - Neos21](https://github.com/Neos21/)
 
 
 [![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png "WTFPL")](http://www.wtfpl.net/)
