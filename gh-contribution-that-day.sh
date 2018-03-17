@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# gh-contribution-that-day : ˆø”‚ÅŽw’è‚µ‚½“ú•t‚ÌƒRƒ~ƒbƒg‚ð¶¬‚·‚é
+# gh-contribution-that-day : å¼•æ•°ã§æŒ‡å®šã—ãŸæ—¥ä»˜ã®ã‚³ãƒŸãƒƒãƒˆã‚’ç”Ÿæˆã™ã‚‹
 # --------------------------------------------------------------------------------
 
 if [ $# -ne 1 ]; then
@@ -8,13 +8,13 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
-# YYYY-MM-DD Œ`Ž®‚Æ git commit —p‚Ì“ú•tŒ`Ž® (Fri Jan 01 12:00:00 2016 +0900) ‚ðì‚é
+# YYYY-MM-DD å½¢å¼ã¨ git commit ç”¨ã®æ—¥ä»˜å½¢å¼ (Fri Jan 01 12:00:00 2016 +0900) ã‚’ä½œã‚‹
 LANG=en_US YMD=`date -d "$1" '+%Y-%m-%d'`
 LANG=en_US CMT=`date -d "$1" '+%a %b %d 12:00:00 %Y +0900'`
 
 echo "gh-contribution-that-day : $YMD"
 
-# ƒtƒ@ƒCƒ‹‚É YYYY-MM-DD ‚ð’Ç‹L‚µ‚ÄƒRƒ~ƒbƒg‚·‚é
+# ãƒ•ã‚¡ã‚¤ãƒ«ã« YYYY-MM-DD ã‚’è¿½è¨˜ã—ã¦ã‚³ãƒŸãƒƒãƒˆã™ã‚‹
 echo $YMD >> gh-contributions.md
 git add gh-contributions.md
 git commit --allow-empty --no-edit --message "$YMD" --date="$CMT" > /dev/null 2>&1

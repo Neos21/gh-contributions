@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# gh-contributions : ”CˆÓ‚Ì“ú•tŠÔ‚ÌƒRƒ~ƒbƒg‚ð¶¬‚·‚é
+# gh-contributions : ä»»æ„ã®æ—¥ä»˜é–“ã®ã‚³ãƒŸãƒƒãƒˆã‚’ç”Ÿæˆã™ã‚‹
 # --------------------------------------------------------------------------------
 
 
-# ŠJŽn“úEI—¹“ú‚ð YYYY-MM-DD ‚ÌŒ`Ž®‚ÅŽw’è‚·‚é
+# é–‹å§‹æ—¥ãƒ»çµ‚äº†æ—¥ã‚’ YYYY-MM-DD ã®å½¢å¼ã§æŒ‡å®šã™ã‚‹
 START=2016-01-01
 END=2017-01-01
 
@@ -12,7 +12,7 @@ END=2017-01-01
 # --------------------------------------------------------------------------------
 
 
-# ŠJŽn“úEI—¹“ú‚ÌƒVƒŠƒAƒ‹’l‚ð¶¬‚·‚é
+# é–‹å§‹æ—¥ãƒ»çµ‚äº†æ—¥ã®ã‚·ãƒªã‚¢ãƒ«å€¤ã‚’ç”Ÿæˆã™ã‚‹
 if [ "$(uname)" == "Darwin" ]; then
   # Mac
   START_DATE=`date -j -f "%Y-%m-%d" "$START" "+%s"`
@@ -23,43 +23,43 @@ else
   END_DATE=`date -d "$END" +%s`
 fi
 
-# ƒVƒŠƒAƒ‹’l‚©‚çŒo‰ß“ú”‚ðŽæ“¾‚·‚é
+# ã‚·ãƒªã‚¢ãƒ«å€¤ã‹ã‚‰çµŒéŽæ—¥æ•°ã‚’å–å¾—ã™ã‚‹
 DAYS_LOOP=$(( ($END_DATE - $START_DATE) / 60 / 60 / 24 ))
 echo "gh-contributions : $START to $END ($DAYS_LOOP days)"
 
-# ƒJƒEƒ“ƒ^•Ï”
+# ã‚«ã‚¦ãƒ³ã‚¿å¤‰æ•°
 DAYS=0
 
-# START ‚©‚ç END ‚Ì“ú•t‚Ü‚Åƒ‹[ƒv‚·‚é
+# START ã‹ã‚‰ END ã®æ—¥ä»˜ã¾ã§ãƒ«ãƒ¼ãƒ—ã™ã‚‹
 while [ $DAYS -le $DAYS_LOOP ]; do
   if [ "$(uname)" == "Darwin" ]; then
     # Mac
     
-    # date -v ƒIƒvƒVƒ‡ƒ“ (“ú•t‚Ì‰ÁŒ¸ŽZ) ‚Ì•¶Žš—ñ•\Œ»‚ðì‚é
+    # date -v ã‚ªãƒ—ã‚·ãƒ§ãƒ³ (æ—¥ä»˜ã®åŠ æ¸›ç®—) ã®æ–‡å­—åˆ—è¡¨ç¾ã‚’ä½œã‚‹
     CURRENT=`date -r $START_DATE -v +"$DAYS"d +%s`
     
-    # YYYY-MM-DD Œ`Ž®‚Æ git commit —p‚Ì“ú•tŒ`Ž® (Fri Jan 01 12:00:00 2016 +0900) ‚ðì‚é
+    # YYYY-MM-DD å½¢å¼ã¨ git commit ç”¨ã®æ—¥ä»˜å½¢å¼ (Fri Jan 01 12:00:00 2016 +0900) ã‚’ä½œã‚‹
     LANG=en_US YMD=`date -r $CURRENT +"%Y-%m-%d"`
     LANG=en_US CMT=`date -r $CURRENT +"%a %b %d 12:00:00 %Y +0900"`
   else
     # Windows
     
-    # date -d ƒIƒvƒVƒ‡ƒ“ (“ú•t‚Ì‰ÁŒ¸ŽZ) ‚Ì•¶Žš—ñ•\Œ»‚ðì‚é
+    # date -d ã‚ªãƒ—ã‚·ãƒ§ãƒ³ (æ—¥ä»˜ã®åŠ æ¸›ç®—) ã®æ–‡å­—åˆ—è¡¨ç¾ã‚’ä½œã‚‹
     CURRENT="$START $DAYS day"
     
-    # YYYY-MM-DD Œ`Ž®‚Æ git commit —p‚Ì“ú•tŒ`Ž® (Fri Jan 01 12:00:00 2016 +0900) ‚ðì‚é
+    # YYYY-MM-DD å½¢å¼ã¨ git commit ç”¨ã®æ—¥ä»˜å½¢å¼ (Fri Jan 01 12:00:00 2016 +0900) ã‚’ä½œã‚‹
     LANG=en_US YMD=`date -d "$CURRENT" '+%Y-%m-%d'`
     LANG=en_US CMT=`date -d "$CURRENT" '+%a %b %d 12:00:00 %Y +0900'`
   fi
   
-  # ƒtƒ@ƒCƒ‹‚É YYYY-MM-DD ‚ð’Ç‹L‚µ‚ÄƒRƒ~ƒbƒg‚·‚é
+  # ãƒ•ã‚¡ã‚¤ãƒ«ã« YYYY-MM-DD ã‚’è¿½è¨˜ã—ã¦ã‚³ãƒŸãƒƒãƒˆã™ã‚‹
   echo $YMD >> gh-contributions.md
   git add gh-contributions.md
   git commit --allow-empty --no-edit --message "$YMD" --date="$CMT" > /dev/null 2>&1
   
   echo "Done : $YMD"
   
-  # ƒCƒ“ƒNƒŠƒƒ“ƒg‚·‚é
+  # ã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ãƒˆã™ã‚‹
   DAYS=$((DAYS + 1 ))
 done
 
