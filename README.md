@@ -7,7 +7,7 @@ GitHub の草を生やすシェルスクリプト。
 
 `git commit --date` オプションを利用して草を生やすシェルスクリプト。
 
-- [Corredor - GitHub に草を生やすシェルスクリプト「gh-contributions」を作った](http://neos21.hatenablog.com/entry/2017/08/12/080000)
+- [Corredor - GitHub に草を生やすシェルスクリプト「gh-contributions」を作った](https://neos21.hatenablog.com/entry/2017/08/12/080000)
 
 ### How to Use?
 
@@ -32,7 +32,7 @@ $ sh ./gh-contributions.sh
 
 引数で指定した日付のコミットを生成し、草を生やすシェルスクリプト。
 
-- [Corredor - 引数で指定した日付のコミットをデッチ上げる gh-contribution-that-day を作った](http://neos21.hatenablog.com/entry/2017/09/02/080000)
+- [Corredor - 引数で指定した日付のコミットをデッチ上げる gh-contribution-that-day を作った](https://neos21.hatenablog.com/entry/2017/09/02/080000)
 
 ### How to Use?
 
@@ -59,9 +59,9 @@ $ sh ./gh-contribution-that-day.sh 20170120
 ## Links
 
 - [Neo's World](http://neo.s21.xrea.com/)
-- [Corredor](http://neos21.hatenablog.com/)
-- [Murga](http://neos21.hatenablog.jp/)
-- [El Mylar](http://neos21.hateblo.jp/)
+- [Corredor](https://neos21.hatenablog.com/)
+- [Murga](https://neos21.hatenablog.jp/)
+- [El Mylar](https://neos21.hateblo.jp/)
 - [Neo's GitHub Pages](https://neos21.github.io/)
 - [GitHub - Neos21](https://github.com/Neos21/)
 
